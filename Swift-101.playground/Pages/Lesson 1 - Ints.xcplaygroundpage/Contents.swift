@@ -24,7 +24,7 @@ let four = 0b0000_0100
 
 // the above is a one to one representation of a byte on disk/ram.  8 discrete bits that either have electrical charge (1) or do not (0).
 // and by the magic of a 2 based number system 10 == 2 and 100 == 4 and so on.
-// 🤯 how high can you count using your fingers? It's not 0-10.  It's 0 - 2^10. 🤯
+// 🤯 how high can you count using your fingers? It's not 0-10. It's 0 - 2^10. 🤯
 
 print(zero)
 print(one)
@@ -74,6 +74,7 @@ print(Int.max) // <--- 😳 that's waaaaaay more than 255
 // try this one:
 print(UInt8.max) // <--- 😀👍
 // 'U' is for 'Unsigned' meaning it doesn't go negative.  8 is for bits.  There's also Int32 & Int16 both signed and unsigned.
+// 'Signed' means there's one bit at the front which dictates whether the value is positive or negative.  So in an 8 bit number - a signed bit has a 'sign' and then 7 value bits.  'Unsigned' can use all 8 bits.
 print("signed max/min: \(Int8.max)/\(Int8.min)")
 print("unsigned max/min: \(UInt8.max)/\(UInt8.min)")
 // UInt8 is the clear Type choice for 0-255 rgb values in a pixel.
@@ -95,7 +96,7 @@ print("iPhone Camera image memory size: \(iphoneCameraImage) bytes")
 
 print("pictures I can hold on my drive with better chosen data types: \(twoFiftySixGBDrive / iphoneCameraImage) .. And nothing else.")
 // Okay.. so we still need to do a lot of compression to match the iphone's image format performance.
-// Compression algorithms are out of the scope of this lesson.  (or my knowledge)
+// Compression algorithms are outside of the scope of this lesson.  (or my knowledge)
 
 
 // REVIEW:
