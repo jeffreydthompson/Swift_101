@@ -1,5 +1,8 @@
 import Foundation
 
+// Classes are a basic means of building a model in Swift.  Generally a thing that you want to model is going to "have things" and "do things".  That is is will have some form of state and function.
+// Classes are one of a few choices that you have to pick from.  Below is a brief introduction.
+
 class Vehicle {
     var passengers: Int
     var position: Double
@@ -72,3 +75,7 @@ sedanTwo.make = "Ferrari"
 sedanTwo.model = "Prius"
 
 print("Sedan is now a \(sedan.make) \(sedan.model) 😱")
+
+// Notes for debugging.  When you want to know what a class is/ is doing and out put to the console:
+print(sedan) // <-- not very descriptive.  just printing a pointer
+dump(sedan) // <-- give you all the info
