@@ -23,6 +23,7 @@ struct Pixel {
     }
 }
 
+// structs get a free intializer, so an explicit init is not necessary, although can be implemented if desired or needed.
 let red = Pixel(r: 255, g: 0, b: 0)
 var copy = red
 copy.b = 255
@@ -39,9 +40,6 @@ print(copy.luminance)
 //red.invert() // <-- red is a 'let' and therefor a constant.  when a func is notated as 'mutating' - it cannot be used by a constant
 copy.invert() // <-- a 'var' is happy to be mutated
 print(copy)
-
-
-// notice above that structs get a free intializer, so an explicit init is not necessary, although can be implemented if desired or needed.
 
 // Creating class for for comparison to the struct
 class ClassPixel {
@@ -80,3 +78,13 @@ classBlue.b = 255
 classBlue.g = 0
 print("red: \(classRed.description)")
 print("blue: \(classBlue.description)")
+
+// structs are also good for constants
+// and can be nested
+struct Constants {
+    struct Endpoints {
+        static let users = "/users/all"
+    }
+}
+
+print(Constants.Endpoints.users)

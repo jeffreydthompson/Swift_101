@@ -6,5 +6,6 @@
         <page name='Lesson 3 - Strings'/>
         <page name='Lesson 4 - Classes'/>
         <page name='Lesson 5 - Structs'/>
+        <page name='Lesson 6 - Enums'/>
     </pages>
 </playground>
